@@ -1,14 +1,176 @@
-﻿<Window x:Class="SpeechEditWpf.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:SpeechEditWpf"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+﻿<Window
+    x:Class="SpeechEditWpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:SpeechEditWpf"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SpeechEdit"
+    Width="900"
+    Height="720"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
     <Grid>
-        <Button 
-            x:Name="signInButton" Content="登录" Margin="0,16,0,0"/>
+        <StackPanel>
+            <Menu Height="30">
+                <MenuItem Height="30" Header="文件">
+                    <MenuItem Header="打开" Icon="{materialDesign:PackIcon Kind=FolderOpen}" />
+                    <MenuItem Header="退出" Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
+                    <Separator />
+                    <MenuItem Header="打印" Icon="{materialDesign:PackIcon Kind=Printer}" />
+                    <MenuItem Header="打印预览" Icon="{materialDesign:PackIcon Kind=PrinterEye}" />
+                </MenuItem>
+                <MenuItem Height="30" Header="声音">
+                    <MenuItem Header="播放" Icon="{materialDesign:PackIcon Kind=Play}" />
+                    <MenuItem Header="循环播放" Icon="{materialDesign:PackIcon Kind=Sync}" />
+                    <MenuItem Header="停止播放" Icon="{materialDesign:PackIcon Kind=Stop}" />
+                </MenuItem>
+                <MenuItem Height="30" Header="分析">
+                    <MenuItem Header="短时傅里叶分析" />
+                    <MenuItem Header="共振峰分析" />
+                    <MenuItem Header="线性预测系数分析" />
+                    <MenuItem Header="基音检测" />
+                    <MenuItem Header="短时能量分析" />
+                    <MenuItem Header="过零率分析" />
+                    <Separator />
+                    <MenuItem Header="倒谱分析">
+                        <MenuItem Header="帧倒谱" />
+                        <MenuItem Header="Mel倒谱" />
+                    </MenuItem>
+                    <MenuItem Header="语谱图分析">
+                        <MenuItem Header="窄带语谱图" />
+                        <MenuItem Header="宽带语谱图" />
+                        <MenuItem Header="窄带语谱图叠加共振峰" />
+                        <MenuItem Header="宽带语谱图叠加共振峰" />
+                    </MenuItem>
+                    <MenuItem Header="情感功能分析">
+                        <MenuItem Header="情感分析" />
+                        <MenuItem Header="动态情感分析" />
+                        <MenuItem Header="语音分离" />
+                        <MenuItem Header="动态匹配分析" />
+                    </MenuItem>
+                </MenuItem>
+
+
+
+
+                <MenuItem Height="30" Header="功能" />
+            </Menu>
+        </StackPanel>
+        <StackPanel Margin="0,30,0,0">
+            <ToolBarTray Height="36">
+                <ToolBar
+                    Height="36"
+                    ClipToBounds="False"
+                    Style="{DynamicResource MaterialDesignToolBar}">
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                    <Separator />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                    <Separator />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                    <Separator />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                    <Separator />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                    <Separator />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                    <Separator />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                    <Separator />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FolderOpen,
+                                                          Size=20}" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSave,
+                                                          Size=20}" />
+                </ToolBar>
+            </ToolBarTray>
+        </StackPanel>
+
     </Grid>
 </Window>

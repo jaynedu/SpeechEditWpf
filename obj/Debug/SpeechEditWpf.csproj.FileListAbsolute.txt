@@ -17,6 +17,5 @@ C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.g.resources
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.Properties.Resources.resources
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.csproj.GenerateResource.cache
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.csproj.CoreCompileInputs.cache
-C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.csproj.CopyComplete
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.exe
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.pdb
