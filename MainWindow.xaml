@@ -48,7 +48,11 @@
                     <MenuItem
                         Click="MicrophoneSetting_Click"
                         Header="暂停录制"
-                        Icon="{materialDesign:PackIcon Kind=Pause}" />
+                        Icon="{materialDesign:PackIcon Kind=MotionPauseOutline}" />
+                    <MenuItem
+                        Click="MicrophoneSetting_Click"
+                        Header="停止录制"
+                        Icon="{materialDesign:PackIcon Kind=StopCircleOutline}" />
                     <Separator />
                     <MenuItem Header="播放" Icon="{materialDesign:PackIcon Kind=Play}" />
                     <MenuItem Header="循环播放" Icon="{materialDesign:PackIcon Kind=Sync}" />
@@ -92,108 +96,180 @@
                     ClipToBounds="False"
                     Style="{DynamicResource MaterialDesignToolBar}">
                     <Button
+                        x:Name="OpenWavButton"
                         Width="30"
                         Height="30"
                         Padding="0"
                         Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
+                                                          Size=20}"
+                        ToolTip="打开文件" />
                     <Button
+                        x:Name="SaveWavButton"
                         Width="30"
                         Height="30"
                         Padding="0"
                         Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
+                                                          Size=20}"
+                        ToolTip="保存文件" />
+                    <Button
+                        x:Name="SaveAsWavButton"
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ContentSaveEdit,
+                                                          Size=20}"
+                        ToolTip="另存为" />
+                    <Button
+                        x:Name="AppendWavButton"
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=FilePlus,
+                                                          Size=20}"
+                        ToolTip="追加" />
                     <Separator />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=Play,
+                                                          Size=20}"
+                        ToolTip="播放" />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=Pause,
+                                                          Size=20}"
+                        ToolTip="暂停" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=Stop,
+                                                          Size=20}"
+                        ToolTip="停止播放" />
                     <Separator />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=RecordCircleOutline,
+                                                          Size=20}"
+                        ToolTip="录制" />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=MotionPauseOutline,
+                                                          Size=20}"
+                        ToolTip="暂停录制" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=StopCircleOutline,
+                                                          Size=20}"
+                        ToolTip="停止录制" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=MicrophoneSettings,
+                                                          Size=20}"
+                        ToolTip="录音设置" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=CurrentAc,
+                                                          Size=20}"
+                        ToolTip="直流偏移测试" />
                     <Separator />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
+                        Content="STFT"
+                        ToolTip="短时傅里叶分析" />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=ChartScatterPlot,
+                                                          Size=20}"
+                        ToolTip="共振峰分析" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="LPC"
+                        ToolTip="线性预测系数分析" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=Tune,
+                                                          Size=20}"
+                        ToolTip="基音检测" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ChartBellCurveCumulative,
+                                                          Size=20}"
+                        ToolTip="短时能量分析" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=ChartBoxOutline,
+                                                          Size=20}"
+                        ToolTip="过零率分析" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=CogOutline,
+                                                          Size=20}"
+                        ToolTip="降噪设置" />
                     <Separator />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=EmoticonHappyOutline,
+                                                          Size=20}"
+                        ToolTip="情感分析" />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=Animation,
+                                                          Size=20}"
+                        ToolTip="动态情感分析" />
+                    <Button
+                        Width="30"
+                        Height="30"
+                        Padding="0"
+                        Content="{materialDesign:PackIcon Kind=TagFaces,
+                                                          Size=20}"
+                        ToolTip="情感匹配分析" />
                     <Separator />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=Printer,
+                                                          Size=20}"
+                        ToolTip="全局打印" />
                     <Button
                         Width="30"
                         Height="30"
                         Padding="0"
-                        Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
-                    <Separator />
-                    <Button
-                        Width="30"
-                        Height="30"
-                        Padding="0"
-                        Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
-                    <Button
-                        Width="30"
-                        Height="30"
-                        Padding="0"
-                        Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
-                    <Separator />
-                    <Button
-                        Width="30"
-                        Height="30"
-                        Padding="0"
-                        Content="{materialDesign:PackIcon Kind=FolderOpen,
-                                                          Size=20}" />
-                    <Button
-                        Width="30"
-                        Height="30"
-                        Padding="0"
-                        Content="{materialDesign:PackIcon Kind=ContentSave,
-                                                          Size=20}" />
+                        Content="{materialDesign:PackIcon Kind=PrinterEye,
+                                                          Size=20}"
+                        ToolTip="全局打印预览" />
                 </ToolBar>
             </ToolBarTray>
             <Grid>
