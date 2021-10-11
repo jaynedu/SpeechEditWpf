@@ -19,3 +19,9 @@ C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.csproj.Genera
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.csproj.CoreCompileInputs.cache
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.exe
 C:\Users\dujing\source\repos\SpeechEditWpf\obj\Debug\SpeechEditWpf.pdb
+C:\Users\dujing\source\repos\SpeechEditWpf\bin\Debug\LiveCharts.dll
+C:\Users\dujing\source\repos\SpeechEditWpf\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\dujing\source\repos\SpeechEditWpf\bin\Debug\LiveCharts.pdb
+C:\Users\dujing\source\repos\SpeechEditWpf\bin\Debug\LiveCharts.xml
+C:\Users\dujing\source\repos\SpeechEditWpf\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\dujing\source\repos\SpeechEditWpf\bin\Debug\LiveCharts.Wpf.xml

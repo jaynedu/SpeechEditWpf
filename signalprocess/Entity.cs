@@ -823,4 +823,17 @@ namespace SpeechEditWpf.signalprocess
         }
         #endregion
     }
+
+    /// <summary>
+    /// WAV文件结构内容描述
+    /// </summary>
+    public struct WavInfo
+    {
+        public int SamplePerSec;    // 采样率
+        public string Channels;     // 通道数信息
+        public string BitsPerSample;
+        public int Data_Size;
+        public int Data_Len;
+        public double Wav_Time;     // wav数据时间长度
+    }
 }
