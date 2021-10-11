@@ -24,5 +24,10 @@ namespace SpeechEditWpf
         {
             InitializeComponent();
         }
+
+        private void MicrophoneSetting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

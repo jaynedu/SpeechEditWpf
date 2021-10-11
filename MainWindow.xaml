@@ -15,18 +15,50 @@
     mc:Ignorable="d">
     <Grid>
         <StackPanel>
-            <Menu Height="30">
+            <Menu
+                Height="30"
+                FontFamily="Microsoft YaHei"
+                FontSize="14">
                 <MenuItem Height="30" Header="文件">
                     <MenuItem Header="打开" Icon="{materialDesign:PackIcon Kind=FolderOpen}" />
+                    <MenuItem Header="追加" />
                     <MenuItem Header="退出" Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
                     <Separator />
-                    <MenuItem Header="打印" Icon="{materialDesign:PackIcon Kind=Printer}" />
-                    <MenuItem Header="打印预览" Icon="{materialDesign:PackIcon Kind=PrinterEye}" />
+                    <MenuItem Header="打印" Icon="{materialDesign:PackIcon Kind=Printer}">
+                        <MenuItem Header="全局" />
+                        <MenuItem Header="原始音频区" />
+                        <MenuItem Header="音频特征区" />
+                    </MenuItem>
+                    <MenuItem Header="打印预览" Icon="{materialDesign:PackIcon Kind=PrinterEye}">
+                        <MenuItem Header="全局" />
+                        <MenuItem Header="原始音频区" />
+                        <MenuItem Header="音频特征区" />
+                    </MenuItem>
                 </MenuItem>
                 <MenuItem Height="30" Header="声音">
+                    <MenuItem
+                        Click="MicrophoneSetting_Click"
+                        Header="录音设置"
+                        Icon="{materialDesign:PackIcon Kind=MicrophoneSettings}" />
+                    <Separator />
+                    <MenuItem
+                        Click="MicrophoneSetting_Click"
+                        Header="录制"
+                        Icon="{materialDesign:PackIcon Kind=RecordCircleOutline}" />
+                    <MenuItem
+                        Click="MicrophoneSetting_Click"
+                        Header="暂停录制"
+                        Icon="{materialDesign:PackIcon Kind=Pause}" />
+                    <Separator />
                     <MenuItem Header="播放" Icon="{materialDesign:PackIcon Kind=Play}" />
                     <MenuItem Header="循环播放" Icon="{materialDesign:PackIcon Kind=Sync}" />
+                    <MenuItem
+                        Click="MicrophoneSetting_Click"
+                        Header="暂停播放"
+                        Icon="{materialDesign:PackIcon Kind=Pause}" />
                     <MenuItem Header="停止播放" Icon="{materialDesign:PackIcon Kind=Stop}" />
+                    <Separator />
+                    <MenuItem Header="直流偏移测试" />
                 </MenuItem>
                 <MenuItem Height="30" Header="分析">
                     <MenuItem Header="短时傅里叶分析" />
@@ -46,14 +78,13 @@
                         <MenuItem Header="窄带语谱图叠加共振峰" />
                         <MenuItem Header="宽带语谱图叠加共振峰" />
                     </MenuItem>
-                    <MenuItem Header="情感功能分析">
-                        <MenuItem Header="情感分析" />
-                        <MenuItem Header="动态情感分析" />
-                        <MenuItem Header="语音分离" />
-                        <MenuItem Header="动态匹配分析" />
-                    </MenuItem>
                 </MenuItem>
-                <MenuItem Height="30" Header="功能" />
+                <MenuItem Height="30" Header="功能">
+                    <MenuItem Header="情感分析" />
+                    <MenuItem Header="动态情感分析" />
+                    <MenuItem Header="情感匹配分析" />
+                    <MenuItem Header="语音分离" />
+                </MenuItem>
             </Menu>
             <ToolBarTray Height="36">
                 <ToolBar
